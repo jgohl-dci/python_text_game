@@ -19,7 +19,7 @@ def stone_img():
     print('~~~~~~~~~~~~~')
     print('~~~~~~~~~~~~~')
 
-def death_img(name):
+def death_img():
     print('~~~~~~#~~~~~~')
     print('~~~~#####~~~~')
     print('~~~~~~#~~~~~~')

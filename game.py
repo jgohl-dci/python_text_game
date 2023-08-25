@@ -63,7 +63,7 @@ while response not in directions:
         while choice not in yes_no:
             choice = input("Do you want to pick it up?\nyes/no\n")
             if choice == "yes":
-                print("You find a bottle of water.\n")
+                print("You found a bottle of water.\n")
                 water += 2
             elif choice == "no":
                 print("Afraid of Snakes? Ok go on.")
@@ -80,7 +80,7 @@ while response not in directions:
 response = ""
 choice = ""
 while response not in directions:
-    print('\n', name, "what's next? You are going to die if you are not getting out of here!")
+    print(name, "what's next? You are going to die if you are not getting out of here!")
     print("To your left, you see sand.")
     print("To your right, there is more sand.")
     print("There is a lot of sand in front of you.")
@@ -90,8 +90,17 @@ while response not in directions:
     water = moving(water)
     
     if response == "left":
-        print("You head to the left. Right in front of you is an old building out of stone")
+        print("You head to the left. Right in front of you is an old building out of stones")
         house_img()
+        while choice not in yes_no:
+            choice = input("Do you want to enter the building?\nyes/no\n")
+            if choice == "yes":
+                print("You step into the building and take a rest.")
+                water += 1
+            elif choice == "no":
+                print("You continue your journey.")
+            else: 
+                print("I didn't understand that.\n")
     elif response == "right":
         print("You fall into a hole. Unable to climb out. Farewell, " + name + ".")
         death_img()
@@ -115,10 +124,11 @@ while response not in directions:
                 else:
                     print('You drink a little bit from the well. After a while your stomach starts to grumble.')
                     print('Maybe it was a bad idea to drink this water.')
-                    water -= 3
+                    water -= 2
+                    water = moving(water)
                 
             elif choice == "no":
-                print("Maybe better for your health.")
+                print("Maybe better for your health.\n")
             else: 
                 print("I didn't understand that.\n")
     elif response == "backward":
@@ -126,7 +136,20 @@ while response not in directions:
     else:
         print("I didn't understand that.\n")
 
+################################################################################## END
+response = ""
+while response not in yes_no:
+    response = input("Would you like to continue your journey?\nyes/no\n")
+    if response == "yes":
+        print("You keep on walking.\n")
+    elif response == "no":
+        print("You stay were you are.")
+        x = 1
+        while x > 0:
+            water = moving(water)
+    else: 
+        print("I didn't understand that.\n")
 
-
-print('\nThank you', name, 'for playing my little game!')
+print('\nCongratulations you made it out of the desert!')
+print('Thank you', name, 'for playing my little game!')
 print('You barely survived. Remaining Water:', water)
