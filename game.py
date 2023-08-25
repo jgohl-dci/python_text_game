@@ -1,4 +1,6 @@
 ################################################################################# Setup
+from assets import house, stone
+
 yes_no = ["yes", "no"]
 directions = ["left", "right", "forward", "backward"]
 water = 10
@@ -51,7 +53,8 @@ while response not in directions:
     elif response == "right":
         print("You head deeper into the desert.\n")
     elif response == "forward":
-        print("You step closer to the rock. Curious but also frightened\n")
+        print("You step closer to the rock. Curious but also frightened")
+        stone()
         while choice not in yes_no:
             choice = input("Do you want to pick it up?\nyes/no\n")
             if choice == "yes":
@@ -72,17 +75,18 @@ while response not in directions:
 response = ""
 choice = ""
 while response not in directions:
-    print(name, "what's next?")
+    print(name, "what's next? You are going to die if you are not getting out of here!")
     print("To your left, you see sand.")
     print("To your right, there is more sand.")
     print("There is a lot of sand in front of you.")
-    print("Behind you is even mor sand. It looks like you got lost\n")
+    print("Behind you is even more sand. It looks like you got lost.\n")
     response = input("What direction do you move?\nleft/right/forward/backward\n")
     
     water = moving(water)
     
     if response == "left":
         print("You head to the left. Right in front of you is an old building out of stone")
+        house()
     elif response == "right":
         print("You fall into a hole. Unable to climb out. Farewell, " + name + ".")
         quit()
