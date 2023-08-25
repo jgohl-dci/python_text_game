@@ -1,13 +1,41 @@
-def house():
-    print('  *  ')
-    print(' * * ')
-    print('*   *')
-    print('*   *')
-    print('*****')
+def desert_img():
+    print('~~~~~~~~~~~~~')
+    print('~~~~~~~~~~~~~')
+    print('~~~~~~~~~~~~~')
+    print('~~~~~~~~~~~~~')
+    print('~~~~~~~~~~~~~')
 
-def stone():
-    print('~~~~~')
-    print('~~~~~')
-    print('~*~~~')
-    print('~~~~~')
-    print('~~~~~')
+def house_img():
+    print('    *')
+    print('   *-*')
+    print('  *---*')
+    print('  *---*')
+    print('~~*~~~*~~~~~~')
+
+def stone_img():
+    print('~~~~~~~~~~~~~')
+    print('~**~~~~~~~~~~')
+    print('~**~~~~~~~~~~')
+    print('~~~~~~~~~~~~~')
+    print('~~~~~~~~~~~~~')
+
+def death_img(name):
+    print('~~~~~~#~~~~~~')
+    print('~~~~#####~~~~')
+    print('~~~~~~#~~~~~~')
+    print('~~~~~~#~~~~~~')
+    print('~~~~~~#~~~~~~')
+    print('\nThank you for playing my little game!')
+
+def well_img():
+    print('~~***~~~~~~~~')
+    print('~*   *~~~~~~~')
+    print('~** **~~~~~~~')
+    print('~*****~~~~~~~')
+    print('~*****~~~~~~~')
+
+desert_img()    
+house_img()
+stone_img()
+death_img()
+well_img()
