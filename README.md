@@ -1,3 +1,3 @@
-#Python text game
+# Python text game
 
 ## Enjoy!
